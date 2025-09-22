@@ -1,0 +1,185 @@
+/* Registro.css */
+:root {
+  --azul-escuro: #0a2463;
+  --azul-claro: #3e92cc;
+  --branco: #fff;
+  --branco-acinzentado: #f8f9fa;
+  --cinza-claro: #e9ecef;
+  --cinza-texto: #6c757d;
+  --preto: #000;
+  --cinza-escuro: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  min-width: 100vh;
+  background: var(--cinza-escuro);
+
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/fundo1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.login-main {
+  background: rgba(22, 22, 49, 0.8);
+  backdrop-filter: blur(7px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.login-main h2 {
+  color: var(--branco);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.user-type-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: var(--branco);
+  padding: 0.5rem;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.user-type-option {
+  position: relative;
+  flex: 1;
+}
+
+.user-type-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.user-type-option label {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: var(--cinza-texto);
+  background: transparent;
+}
+
+.user-type-option input[type="radio"]:checked + label {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-form input {
+  padding: 1rem;
+  border: 2px solid var(--cinza-claro);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(62, 146, 204, 0.2);
+}
+
+.password-field {
+  position: relative;
+}
+
+.forgot-link {
+  text-align: right;
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: var(--branco);
+}
+
+.login-form button {
+  padding: 1rem;
+  width: 200px;
+  margin: 0 auto;
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-form button:hover {
+  background-color: var(--azul-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 36, 99, 0.2);
+}
+
+.register {
+  text-align: center;
+  color: var(--cinza-claro);
+  margin-top: 1rem;
+}
+
+.register a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.register a:hover {
+  color: var(--azul-claro);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-main {
+    padding: 1.5rem;
+    margin: 20px;
+    margin-top: 0;
+  }
+
+  .user-type-selector {
+    flex-direction: row;
+  }
+}
